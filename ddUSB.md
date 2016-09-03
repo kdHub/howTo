@@ -13,6 +13,9 @@ First you will need to install pv, with the command:
 Then some examples are:
 ```
 pv -n /dev/urandom | dd of=/dev/null
+
+or
+
 sudo pv -tpreb source.iso | sudo dd of=/dev/BLABLA bs=4096 conv=notrunc,noerror
 ```
 Note: the first sample is 5 characters less typing then dd if=/dev/urandom | pv | dd of=/dev/null.
