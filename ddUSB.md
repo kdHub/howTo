@@ -2,7 +2,6 @@
 - identify your usb drive
 ```lsusb -v``` or
 ```df -h | less``` use q to quit df
-- ```sudo umount /dev/sdb```
 - dd to usb drive once identified
 ```dd bs=4M if=tails-i386-2.5.iso of=/dev/sdb && sync```
 
@@ -14,7 +13,7 @@ First you will need to install pv, with the command:
 Then some examples are:
 ```
 pv -n /dev/urandom | dd of=/dev/null
-pv -tpreb source.iso | dd of=/dev/BLABLA bs=4096 conv=notrunc,noerror
+sudo pv -tpreb source.iso | sudo dd of=/dev/BLABLA bs=4096 conv=notrunc,noerror
 ```
 Note: the first sample is 5 characters less typing then dd if=/dev/urandom | pv | dd of=/dev/null.
 
