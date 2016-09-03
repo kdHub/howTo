@@ -2,7 +2,6 @@
 - identify your usb drive
 ```lsusb -v``` or
 ```df -h | less``` use q to quit df
-- format ```sudo mkfs.ext4 /dev/sdx```
 - dd to usb drive once identified
 ```dd bs=4M if=tails-i386-2.5.iso of=/dev/sdb && sync```
 
@@ -10,7 +9,7 @@ A few handy sample usages with pv and less typing or more progress then other an
 
 First you will need to install pv, with the command:
 
-```sudo apt-get install```  </br>
+```sudo apt-get install pv```  </br>
 Then some examples are:
 ```
 pv -n /dev/urandom | dd of=/dev/null
