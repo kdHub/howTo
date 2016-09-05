@@ -1,0 +1,19 @@
+up vote
+0
+down vote
+If you have your server port different than the public one, use this configuration:
+
+Public IP: 1.1.1.1
+Public port: 8888
+Local IP: 192.168.0.2
+Local port: 80
+and:
+
+/ip firewall nat
+add chain=dstnat dst-address-type=local protocol=tcp dst-port=8888 \
+action=dst-nat to-address=192.168.0.2 to-port=80
+
+/ip firewall nat
+add chain=srcnat src-address=192.168.0.0/24 \
+dst-address=192.168.0.2 protocol=tcp dst-port=80 \
+out-interface=ehter2-master-local action=masquerade
