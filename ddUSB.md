@@ -1,3 +1,14 @@
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+https://etcher.io/
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
 - open terminal
 - identify your usb drive
 ```lsusb -v``` or
